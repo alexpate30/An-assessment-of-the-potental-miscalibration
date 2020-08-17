@@ -1,0 +1,34 @@
+---
+title: "baseline tables"
+author: "Alex Pate"
+date: "15/03/2019"
+output: word_document
+---
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+### SET THE ROOT DIRECTORY
+
+### SET THE ROOT DIRECTORY
+
+load("R_out_MSM2017/baseline_table_male.RData")
+
+library(knitr)
+print("male")
+kable(cont.vars)
+kable(cat.vars, digits=c(2,2,2,2))
+
+N.devel.male
+N.valid.male
+
+load("R_out_MSM2017/baseline_table_female.RData")
+
+print("female")
+kable(cont.vars)
+kable(cat.vars, digits=c(2,2,2,2))
+
+N.devel.female
+N.valid.female
+```
+
